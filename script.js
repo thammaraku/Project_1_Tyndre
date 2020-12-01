@@ -1,7 +1,7 @@
 //////////////////////////// VARIABLES ////////////////////////////////////////
 
-const graceNoteMovieApi = "xw2s7tehhm97h56k9v6qkeyk";  //Thammarak account1
-// const graceNoteMovieApi = "jf2p6cj9xp8pspnqcjg44rc9";  //Thammarak account2
+// const graceNoteMovieApi = "xw2s7tehhm97h56k9v6qkeyk";  //Thammarak account1
+const graceNoteMovieApi = "jf2p6cj9xp8pspnqcjg44rc9";  //Thammarak account2
 var graceNoteMoviePrefix = "https://data.tmsapi.com/v1.1/movies/showings?";
 // sample of request var graceNoteMoviePrefix = "https://data.tmsapi.com/v1.1/movies/showings?genres=action&startDate=2020-11-23&zip=78613&radius=5&api_key=adsprbrpwkseeq22z6hc2386";
 const graceNoteMoviePosterLink = "https://demo.tmsimg.com/";
@@ -265,28 +265,32 @@ function getRestaurant(foodCuisine){
 
 //////////////////////////// EXECUTION ////////////////////////////////////////
 
-$("#location-button").click(function (event) {
+$( document ).ready(function() {
 
-    // alert("You selected zipCode " + $('.input').val());
-    // alert("You selected genres " + $("#movie-selections option:selected").text());
-    // alert("You selected dateSearch " + $('#date-select').val());
-    // alert("You selected timeSearch " + $('#time-select').val());
+    $("#location-button").click(function (event) {
 
-    event.preventDefault;
+        // alert("You selected zipCode " + $('.input').val());
+        // alert("You selected genres " + $("#movie-selections option:selected").text());
+        // alert("You selected dateSearch " + $('#date-select').val());
+        // alert("You selected timeSearch " + $('#time-select').val());
 
-    window.zipCode = $('.input').val();
+        event.preventDefault;
 
-    window.genresSearch = $("#movie-selections option:selected").text();
-    genresSearch = genresSearch.toLowerCase();
+        window.zipCode = $('.input').val();
 
-    window.dateSearch = $('#date-select').val();
-    window.timeSearch = $('#time-select').val();
-    window.dateTimeSearch = dateSearch + "T" + timeSearch;
+        window.genresSearch = $("#movie-selections option:selected").text();
+        genresSearch = genresSearch.toLowerCase();
 
-    getMovies(zipCode, genresSearch, dateTimeSearch);
-    getFoodCuisine();
+        window.dateSearch = $('#date-select').val();
+        window.timeSearch = $('#time-select').val();
+        window.dateTimeSearch = dateSearch + "T" + timeSearch;
 
-})
+        getMovies(zipCode, genresSearch, dateTimeSearch);
+        getFoodCuisine();
+
+    })
+
+});
 
 
 

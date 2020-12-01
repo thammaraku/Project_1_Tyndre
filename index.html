@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- links -->
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tyndre</title>
+
+    <!-- BULMA -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" rel="stylesheet" /> -->
+    <!-- <link href="~bulma-calendar/dist/css/bulma-calendar.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bulma-calendar@5.0.3/dist/css/bulma-calendar.min.css" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+
+    <!-- MAPBOX -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- OUR OWN CSS -->
+    <link rel="stylesheet" href="./assets/style.css">
+
+</head>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+            data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <!-- logo nav bar 
+    <a class="navbar-item">
+        <img src="" width="120" height="100" alt="Tyndre">
+    </a>-->
+    <!-- nav -->
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+            <a class="navbar-item" href="#about">
+                About
+            </a>
+            <a class="navbar-item" href="#team">
+                Team
+            </a>
+            <a class="navbar-item" href="#contactInfo">
+                Contact
+            </a>
+        </div>
+    </div>
+</nav>
+<!-- hero..jumbotron -->
+<section class="hero is-black">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title-1 has-text-centered">
+                Tyndre
+            </h1>
+            <h2 class="subtitle-1 has-text-centered">
+                together.love.care
+            </h2>
+        </div>
+    </div>
+</section>
+<!-- body -->
+
+<body>
+    <!-- Div tag for all columns top of page -->
+    <div class="columns">
+
+
+        <!-- DATEPICKER -->
+        <div class="column is-auto">
+            <section class="section" id="fdt">
+                <div class="container is-fluid">
+                    <h1 class="title">pick a time!</h1>
+                    <h2 class="subtitle">
+                        choose a specific time for a special time.
+                    </h2>
+                    <label class="label">timing is everything</label>
+                    <input id="date-select" type="date">
+                    <input id="time-select" type="time">
+                </div>
+            </section>
+        </div> <!-- END OF DATEPICKER -->
+
+
+        <!-- LOCATION SELECT -->
+        <div class="column is-auto">
+            <section class="section" id="fdt">
+                <div class="container is-fluid">
+                  <h1 class="title">where ya' located?</h1>
+                  <h2 class="subtitle">
+                    let's choose the perfect location.
+                  </h2>
+                  <div class="field">
+                    <label class="label">zipcode please</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="78741">
+                    </div>
+                    <!-- THAMMARAK ADD ID -->
+                  </div>
+                </div>
+              </section>
+        </div>
+        <!-- Food Column -->
+        <div class="column is-auto">
+            <section class="section" id="fdt">
+                <div class="container is-fluid">
+                    <h1 class="title">idc, you choose!</h1>
+                    <h2 class="subtitle">
+                        let's pick where to eat.
+                    </h2>
+                    <div class="field">
+                        <label class="label">hungry?</label>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select">
+                                    <select name="field-name" id="foodCuisines">
+                                        <option> Select Cuisine</option>
+                                        <option>Italian</option>
+                                        <option>Chinese</option>
+                                        <option>Thai</option>
+                                        <option>Vietnamese</option>
+                                        <option>Mexican</option>
+                                        <option>French</option>
+                                        <option>Coffee</option>
+                                        <option>Desert</option>
+                                        <option>American</option>
+                                        <option>Deli</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+            </section>
+        </div>
+        <!-- Movie Column -->
+        <div class="column is-auto">
+            <!-- Fourth column -->
+            <section class="section is-fluid" id="fdt">
+                <div class="container is-fluid">
+                    <h1 class="title">movie and chill?</h1>
+                    <h2 class="subtitle">
+                        lets choose what to watch...
+                    </h2>
+                    <div class="field">
+                        <label class="label is-white">popcorn time!</label>
+                        <div class="field">
+                            <div class="field">
+
+                                <div class="control">
+
+                                    <!-- THAMMARAK ADD CLASS TARGET -->
+                                    <div class="target select">
+
+                                        <!-- THAMMARAK ADD ID MOVIE SELECTIONS -->
+                                        <select id="movie-selections" name="field-name">
+
+                                            <!-- THAMMARAK ADD GENRES -->
+                                            <option>Select Genres</option>
+                                            <option>Comedy</option>
+                                            <option>Thriller</option>
+                                            <option>Drama</option>
+                                            <option>Action</option>
+                                            <option>Romance</option>
+                                            <option>Children</option>
+                                            <option>Foreign</option>
+                                            <option>Horror</option>
+                                            <option>Animated</option>
+                                            <option>Documentary</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+<br>
+<br>
+
+    <div class="columns is-centered">
+            <button id="location-button" class= "button is-rounded is-primary is-large">Let's have a good time! Click to Search!</button>
+    </div>
+    
+      
+
+
+    <!--RESTAURANT AND MOVIES PARTS-->
+    <div class="block">
+
+        <!--LEFT COLUMN-->
+        <div class="columns">
+
+            <!-- LEFT COLUMN RESTAURANT CHOICES -->
+            <div class="column is-6">
+
+                <h1 class=is-size-1>YOUR RESTAURANT CHOICES</h1>
+                <br>
+                <br>
+                <br>
+                <!-- MOVIE CARD 1 -->
+                <div id="restaurant-result-1" class="card-1">
+
+                    <div class="columns">
+
+                        <div class="column is-one-quarter">
+                            <div class="card-header">
+                                <h1 class="restaurant-title has-text-weight-bold is-size-2"></h1>
+                            </div>
+                            <div>
+                                <figure class="image is-128x128">
+                                    <img class="restaurantThumb" src="" alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="column is-three-quarter">
+                            <div class="card-content is-size-5">
+                                <p class="theatre"></p><a href="" target="_blank" id="ticket-link"></a>
+                                <div class="schedule mt-5 pt-5"></div>
+                                <div class="asdf mt-5 pt-5"></div>
+                                <div class="qwert mt-5 pt-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END OF COLUMN-->
+                </div>
+                <!--END OF CARD-->
+
+                <br>
+                <br>
+                <br>
+
+                <!-- MOVIE CARD 2 -->
+                <div id="restaurant-result-2" class="card-2">
+
+                    <div class="columns">
+
+                        <div class="column is-one-quarter">
+                            <div class="card-header">
+                                <h1 class="restaurant-title has-text-weight-bold is-size-2"></h1>
+                            </div>
+                            <div>
+                                <figure class="image is-128x128">
+                                    <img class="restaurantThumb" src="" alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="column is-three-quarter">
+                            <div class="card-content is-size-5">
+                                <p class="theatre"></p><a href="" target="_blank" id="ticket-link"></a>
+                                <div class="schedule mt-5 pt-5"></div>
+                                <div class="asdf mt-5 pt-5"></div>
+                                <div class="qwert mt-5 pt-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END OF COLUMN-->
+                </div>
+                <!--END OF CARD-->
+
+                <br>
+                <br>
+                <br>
+
+                <!-- MOVIE CARD 3 -->
+                <div id="restaurant-result-3" class="card-3">
+
+                    <div class="columns">
+
+                        <div class="column is-one-quarter">
+                            <div class="card-header">
+                                <h1 class="restaurant-title has-text-weight-bold is-size-2"></h1>
+                            </div>
+                            <div>
+                                <figure class="image is-128x128">
+                                    <img class="restaurantThumb" src="" alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="column is-three-quarter">
+                            <div class="card-content is-size-5">
+                                <p class="theatre"></p><a href="" target="_blank" id="ticket-link"></a>
+                                <div class="schedule mt-5 pt-5"></div>
+                                <div class="asdf mt-5 pt-5"></div>
+                                <div class="qwert mt-5 pt-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END OF COLUMN-->
+                </div>
+                <!--END OF CARD-->
+
+                <br>
+                <br>
+                <br>
+
+                <!-- MOVIE CARD 4 -->
+                <div id="restaurant-result-4" class="card-4">
+
+                    <div class="columns">
+
+                        <div class="column is-one-quarter">
+                            <div class="card-header">
+                                <h1 class="restaurant-title has-text-weight-bold is-size-2"></h1>
+                            </div>
+                            <div>
+                                <figure class="image is-128x128">
+                                    <img class="restaurantThumb" src="" alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="column is-three-quarter">
+                            <div class="card-content is-size-5">
+                                <p class="theatre"></p><a href="" target="_blank" id="ticket-link"></a>
+                                <div class="schedule mt-5 pt-5"></div>
+                                <div class="asdf mt-5 pt-5"></div>
+                                <div class="qwert mt-5 pt-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END OF COLUMN-->
+                </div>
+                <!--END OF CARD-->
+
+                <br>
+                <br>
+                <br>
+
+                <!-- MOVIE CARD 5 -->
+                <div id="restaurant-result-5" class="card-5">
+
+                    <div class="columns">
+
+                        <div class="column is-one-quarter">
+                            <div class="card-header">
+                                <h1 class="restaurant-title has-text-weight-bold is-size-2"></h1>
+                            </div>
+                            <div>
+                                <figure class="image is-128x128">
+                                    <img class="restaurantThumb" src="" alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="column is-three-quarter">
+                            <div class="card-content is-size-5">
+                                <p class="theatre"></p><a href="" target="_blank" id="ticket-link"></a>
+                                <div class="schedule mt-5 pt-5"></div>
+                                <div class="asdf mt-5 pt-5"></div>
+                                <div class="qwert mt-5 pt-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END OF COLUMN-->
+                </div>
+                <!--END OF CARD-->
+
+                <br>
+                <br>
+                <br>
+
+            </div>
+            <!--END OF MIDDLE COLUMN-->
+
+
+            <!-- RIGHT COLUMN MOVIES CHOICE-->
+            <div class="column is-6">
+
+                <h1 class=is-size-1>YOUR MOVIES CHOICES</h1>
+                <br>
+                <br>
+                <br>
+                <!-- MOVIE CARD 1 -->
+                <div id="mov-result-1" class="card-1">
+
+                    <div class="columns">
+
+                        <div class="column is-one-quarter">
+                            <div class="card-header">
+                                <h1 class="mov-title has-text-weight-bold is-size-2"></h1>
+                            </div>
+                            <div>
+                                <figure class="image is-128x128">
+                                    <img class="movieThumb" src="" alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="column is-three-quarter">
+                            <div class="card-content is-size-5">
+                                <p class="theatre"></p><a href="" target="_blank" id="ticket-link"></a>
+                                <div class="schedule mt-5 pt-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END OF COLUMN-->
+                </div>
+                <!--END OF CARD-->
+
+                <br>
+                <br>
+                <br>
+
+                <!-- MOVIE CARD 2 -->
+                <div id="mov-result-2" class="card-2">
+
+                    <div class="columns">
+
+                        <div class="column is-one-quarter">
+                            <div class="card-header">
+                                <h1 class="mov-title has-text-weight-bold is-size-2"></h1>
+                            </div>
+                            <div>
+                                <figure class="image is-128x128">
+                                    <img class="movieThumb" src="" alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="column is-three-quarter">
+                            <div class="card-content is-size-5">
+                                <p class="theatre"></p><a href="" target="_blank" id="ticket-link"></a>
+                                <div class="schedule mt-5 pt-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END OF COLUMN-->
+                </div>
+                <!--END OF CARD-->
+
+                <br>
+                <br>
+                <br>
+
+                <!-- MOVIE CARD 3 -->
+                <div id="mov-result-3" class="card-3">
+
+                    <div class="columns">
+
+                        <div class="column is-one-quarter">
+                            <div class="card-header">
+                                <h1 class="mov-title has-text-weight-bold is-size-2"></h1>
+                            </div>
+                            <div>
+                                <figure class="image is-128x128">
+                                    <img class="movieThumb" src="" alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="column is-three-quarter">
+                            <div class="card-content is-size-5">
+                                <p class="theatre"></p><a href="" target="_blank" id="ticket-link"></a>
+                                <div class="schedule mt-5 pt-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END OF COLUMN-->
+                </div>
+                <!--END OF CARD-->
+
+                <br>
+                <br>
+                <br>
+
+                <!-- MOVIE CARD 4 -->
+                <div id="mov-result-4" class="card-4">
+
+                    <div class="columns">
+
+                        <div class="column is-one-quarter">
+                            <div class="card-header">
+                                <h1 class="mov-title has-text-weight-bold is-size-2"></h1>
+                            </div>
+                            <div>
+                                <figure class="image is-128x128">
+                                    <img class="movieThumb" src="" alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="column is-three-quarter">
+                            <div class="card-content is-size-5">
+                                <p class="theatre"></p><a href="" target="_blank" id="ticket-link"></a>
+                                <div class="schedule mt-5 pt-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END OF COLUMN-->
+                </div>
+                <!--END OF CARD-->
+
+                <br>
+                <br>
+                <br>
+
+                <!-- MOVIE CARD 5 -->
+                <div id="mov-result-5" class="card-5">
+
+                    <div class="columns">
+
+                        <div class="column is-one-quarter">
+                            <div class="card-header">
+                                <h1 class="mov-title has-text-weight-bold is-size-2"></h1>
+                            </div>
+                            <div>
+                                <figure class="image is-128x128">
+                                    <img class="movieThumb" src="" alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="column is-three-quarter">
+                            <div class="card-content is-size-5">
+                                <p class="theatre"></p><a href="" target="_blank" id="ticket-link"></a>
+                                <div class="schedule mt-5 pt-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END OF COLUMN-->
+                </div>
+                <!--END OF CARD-->
+
+                <br>
+                <br>
+                <br>
+
+            </div>
+            <!-- END OF RIGHT COLUMN-->
+
+        </div>
+        <!--END OF COLUMNS-->
+
+    </div>
+    <!--END OF BLOCK-->
+
+
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="container has-text-centered">
+            <!-- <div class="level">
+                <div class="level-item has-text-centered"><a href="#">
+             </div> -->
+            <h2 class="title">Learn more about Tyndre</h2>
+            <p>Our mission is not to to compete with Tinder, Yelp, etc.. with our product. We are not in it for the money - we are in it to make the whole world connected. To give you control over your time. To
+                change the world as we know it by integrating multi services into one dominate service that wil crush all. Watch out Facebook, Instagram, Amazon and Steven Segal...you're next!</p>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="team" id="team">
+        <div class="container2 has-text-centered py-6">
+            <h2 class="title">The Team</h2>
+            <p class="subtitle1 mb-6">We are the guys that made this whole thing possible</p>
+            <div class="columns is-multiline py-5">
+                <div class="column is-6 is-4-widescreen mb-6">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-64x64"><img class="is-rounded" src="./assets/images/IMG_2198.PNG"
+                                    alt="Son Nguyen"></figure>
+                        </div>
+                        <div class="media-content">
+                            <h4 class="title is-4">Son Nguyen</h4>
+                            <p class="subtitle">Java Script, HTML, Ninja</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6 is-4-widescreen mb-6">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-64x64"><img class="is-rounded" src="./assets/images/thammarak_photo.jpg"
+                                    alt="Thammarak"></figure>
+                        </div>
+                        <div class="media-content">
+                            <h4 class="title is-4">Thammarak Uppayokhin  </h4>
+                            <p class="subtitle">Java Script Master</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="column is-6 is-4-widescreen mb-6">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-64x64"><img class="is-rounded" src="./assets/images/Screen Shot 2020-11-29 at 9.21.47 PM.png"
+                                    alt="Rick">
+                            </figure>
+                        </div>
+                        iv class="media-content">
+                            <h4 <dclass="title is-4">Rick Fredrickson</h4>
+                            <p class="subtitle">HTML, CSS, Presenter</p>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="column is-6 is-4-widescreen mb-6">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-64x64"><img class="is-rounded" src="./assets/images/karina-chance-64.jpg"
+                                    alt="Sterling Duke"></figure>
+                        </div>
+                        <div class="media-content">
+                            <h4 class="title is-4">Sterling Duke</h4>
+                            <p class="subtitle">HTML, CSS Padawan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact info -->
+    <section class="section" id="contactInfo">
+        <div class="container py-4">
+            <h2 class="title has-text-centered mb-6">Contact the Tyndre Team</h2>
+            <div class="columns is-vcentered">
+                <div class="column is-6"><img src="./assets/images/AdobeStock_251543094.jpeg" alt=""></div>
+                <div class="column is-6">
+                    <h4 class="title is-spaced is-4">Let's Chat</h4>
+                    <p class="subtitle">We're here to answer your questions.</p>
+                    <div>
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-24x24"><img src="placeholder/icons/map-marker.svg" alt="">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>Tyndre Inc. HQ 3200 E. Riverside Austin, Tx 78741</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-24x24"><img src="placeholder/icons/phone.svg" alt=""></figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <a href="tel:+1-512-123-4567">512-123-4567</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-24x24"><img src="placeholder/icons/envelope.svg" alt="">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <a href="mailto:tyndre.inc@gmail.com">tyndre.inc@gmail.com</a>
+        
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <script async type="text/javascript" src="script.js"></script>
+    <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script>
+
+
+    <!-- THAMMARAK ADD -->
+
+    <!-- jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Moment JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <!-- Bulma Calendar -->
+    <!-- <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bulma-calendar@5.0.3/dist/js/bulma-calendar.min.js"></script>
+    <!-- Our jsScript -->
+    <script src="./script.js"></script>
+   
+
+
+</body>
+
+</html>
+    

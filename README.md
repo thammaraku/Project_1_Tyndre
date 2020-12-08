@@ -8,10 +8,10 @@ I want to provide data on movies and restaurant reservation so that I can plan a
 ## Application
 
 ### Github Repository URL
-https://github.com/shn375/UTA-Project-1
+https://github.com/thammaraku/Project_1_Tyndre
 
 ### Github Page URL
-https://shn375.github.io/UTA-Project-1/
+https://thammaraku.github.io/Project_1_Tyndre/
 
 ### Screenshots
 ![A user clicks on slots on the color-coded calendar and edits the events.](./assets/images/project1_tyndre.png)

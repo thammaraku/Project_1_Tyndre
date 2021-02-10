@@ -11,7 +11,7 @@ I want to provide data on movies and restaurant reservation so that I can plan a
 https://github.com/thammaraku/Project_1_Tyndre
 
 ### Github Page URL
-https://thammaraku.github.io/Project_1_Tyndre/
+https://thammaraku.github.io/Tyndre/
 
 ### Screenshots
 ![A user clicks on slots on the color-coded calendar and edits the events.](./assets/images/project1_tyndre.png)
